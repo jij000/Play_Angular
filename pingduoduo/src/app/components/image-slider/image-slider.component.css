@@ -1,0 +1,47 @@
+.contianer {
+    position: relative;
+    overflow: hidden;
+}
+
+.contianer .image-slider {
+    display: flex;
+    overflow-x: scroll;
+    /* 图片切换动画 */
+    scroll-behavior: smooth;
+    /* 手机屏可触摸 */
+    -webkit-overflow-scrolling: touch;
+    /* 强制x 轴吸附 */
+    scroll-snap-type: x mandatory;
+}
+
+.contianer img{
+    width: 100%;
+    height: 100%;
+    /* 图片完整显示 */
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* 遮罩 */
+.nav-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.5;
+    color: white;
+    background-color: black;
+    /* 小圆点靠右 */
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.nav-section .slide-button{
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 5px;
+}
